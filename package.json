@@ -1,0 +1,25 @@
+{
+    "name": "oari",
+    "version": "0.1.0",
+    "description": "오아리 최고",
+    "keywords": [
+        "dog",
+        "images",
+        "cute"
+    ],
+    "homepage": "https://ju-nong.github.io/oari",
+    "license": "MIT",
+    "author": {
+        "name": "Lee junyong",
+        "email": "iiiuooyoo@gmail.com",
+        "url": "https://github.com/ju-nong"
+    },
+    "main": "dist/images",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ju-nong/oari.git"
+    },
+    "files": [
+        "/dist"
+    ]
+}
