@@ -20,6 +20,8 @@
         "url": "https://github.com/ju-nong/oari.git"
     },
     "files": [
-        "/dist"
+        "dist",
+        "dist/images",
+        "README.md"
     ]
 }
