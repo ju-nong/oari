@@ -1,16 +1,19 @@
-const fs = require("fs");
-const path = require("path");
-
-const getAri = (number, dir = "images") => {
-    const imageDir = path.join(process.cwd(), dir);
+const getAri = async (number) => {
     const imageFileName = `${number}.jpg`;
-    const filePath = path.join(imageDir, imageFileName);
+    const moduleURL = new URL(import.meta.url);
+    const imagePath = new URL(`./images/${imageFileName}`, moduleURL).href;
 
-    if (fs.existsSync(filePath)) {
-        const image = fs.readFileSync(filePath);
-        return { [imageFileName]: image };
-    } else {
-        console.error(`There is no such Ari${filePath}`);
+    try {
+        const response = await fetch(imagePath);
+        if (response.status === 200) {
+            const blob = await response.blob();
+            return { [imageFileName]: blob };
+        } else {
+            console.error(`There is no such Ari${filePath}`);
+            return {};
+        }
+    } catch (error) {
+        console.error(`Error fetching Ari${filePath}`);
         return {};
     }
 };
