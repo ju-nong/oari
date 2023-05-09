@@ -1,10 +1,9 @@
 const getAri = async (number) => {
     const imageFileName = `${number}.jpg`;
-    const moduleURL = new URL(import.meta.url);
-    const imagePath = new URL(`./images/${imageFileName}`, moduleURL).href;
+    const filePath = require(`/node_modules/oari/images/${imageFileName}`);
 
     try {
-        const response = await fetch(imagePath);
+        const response = await fetch(filePath);
         if (response.status === 200) {
             const blob = await response.blob();
             return { [imageFileName]: blob };
