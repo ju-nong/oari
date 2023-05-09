@@ -1,7 +1,7 @@
 {
     "name": "oari",
     "version": "0.1.1",
-    "description": "오아리 최고",
+    "description": "do getAri function",
     "keywords": [
         "dog",
         "images",
@@ -14,14 +14,14 @@
         "email": "iiiuooyoo@gmail.com",
         "url": "https://github.com/ju-nong"
     },
-    "main": "dist/images",
+    "main": "index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/ju-nong/oari.git"
     },
     "files": [
-        "dist",
-        "dist/images",
+        "index.js",
+        "images",
         "README.md"
     ]
 }
